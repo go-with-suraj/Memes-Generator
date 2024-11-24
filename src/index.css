@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Full-Screen Layout */
+.container {
+    width: 100%;
+    max-width: 1400px; /* Keeps the content manageable on very large screens */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background: linear-gradient(90deg, #672280 0%, #A626D3 100%);
+    color: white;
+    padding: 0 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header--image {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.header--title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header--project {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Main Content Styling */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    background: white;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* Form Styling */
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px; /* Restricts the form's width for better readability */
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f8f8fb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form--input {
+    font-family: "Karla", sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d5d4d8;
+    background: #ffffff;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.form--input:focus {
+    border-color: #672280;
+}
+
+.form--button {
+    grid-column: span 2;
+    font-family: "Karla", sans-serif;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #711F8D 0%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form--button:hover {
+    background: linear-gradient(90deg, #5a176a 0%, #9015c0 100%);
+}
+
+/* Meme Section Styling */
+.meme {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.meme--image {
+    width: 100%;
+    max-width: 900px;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 60vh; /* Limit the height to 60% of the viewport height */
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Ensures the entire image is visible */
+}
+
+
+.meme--text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: impact, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+    padding: 0 10px;
+}
+
+.top {
+    top: 10px;
+}
+
+.bottom {
+    bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header--title {
+        font-size: 1.5rem;
+    }
+
+    .header--project {
+        font-size: 0.85rem;
+    }
+
+    .form--input {
+        font-size: 0.9rem;
+    }
+
+    .form--button {
+        font-size: 1rem;
+    }
+
+    .meme--text {
+        font-size: 1.6rem;
+    }
+}
